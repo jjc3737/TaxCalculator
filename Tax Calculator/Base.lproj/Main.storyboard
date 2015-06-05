@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="RootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orange_bg" translatesAutoresizingMaskIntoConstraints="NO" id="s3m-27-FIF">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yiN-nk-R3L">
+                                <rect key="frame" x="239" y="196" width="123" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="47A-nf-69f"/>
+                                    <constraint firstAttribute="height" constant="28" id="bGi-pE-Euq"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="CA"/>
+                                    <segment title="CHI"/>
+                                    <segment title="NY"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKf-Nn-bZR">
+                                <rect key="frame" x="227" y="259" width="146" height="36"/>
+                                <color key="backgroundColor" red="1" green="0.28022630904401213" blue="0.083850789803676107" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146" id="K9b-jD-12S"/>
+                                    <constraint firstAttribute="height" constant="36" id="uK0-FU-TvD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Calculate ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCalculateButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="L65-jN-w8r"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Mg-u6-upI">
+                                <rect key="frame" x="269" y="80" width="63" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="RDf-p2-DKg"/>
+                                    <constraint firstAttribute="width" constant="63" id="t5v-Ny-TOt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Price" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ev-rc-Dzd">
+                                <rect key="frame" x="239" y="134" width="123" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="E5u-dM-FbH"/>
+                                    <constraint firstAttribute="height" constant="30" id="Zdu-Q5-Kf0"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="s3m-27-FIF" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="0sB-Dl-IFC"/>
+                            <constraint firstItem="CKf-Nn-bZR" firstAttribute="top" secondItem="yiN-nk-R3L" secondAttribute="bottom" constant="35" id="5Eu-h1-2Mv"/>
+                            <constraint firstAttribute="trailing" secondItem="s3m-27-FIF" secondAttribute="trailing" id="AiH-Qj-01z"/>
+                            <constraint firstAttribute="centerX" secondItem="1ev-rc-Dzd" secondAttribute="centerX" id="DBL-B2-Kq2"/>
+                            <constraint firstAttribute="centerX" secondItem="yiN-nk-R3L" secondAttribute="centerX" id="JGn-bS-XRv"/>
+                            <constraint firstItem="s3m-27-FIF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="RS9-aJ-hyL"/>
+                            <constraint firstAttribute="centerX" secondItem="CKf-Nn-bZR" secondAttribute="centerX" id="SE1-UE-9zF"/>
+                            <constraint firstItem="1ev-rc-Dzd" firstAttribute="top" secondItem="9Mg-u6-upI" secondAttribute="bottom" constant="33" id="VGZ-lv-2jV"/>
+                            <constraint firstItem="yiN-nk-R3L" firstAttribute="top" secondItem="1ev-rc-Dzd" secondAttribute="bottom" constant="32" id="bfJ-ut-sHU"/>
+                            <constraint firstAttribute="centerX" secondItem="9Mg-u6-upI" secondAttribute="centerX" id="lzT-oZ-wgf"/>
+                            <constraint firstAttribute="bottom" secondItem="s3m-27-FIF" secondAttribute="bottom" id="pyB-xL-R9l"/>
+                            <constraint firstItem="9Mg-u6-upI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="60" id="uGy-Bk-vW4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="s3m-27-FIF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0sB-Dl-IFC"/>
+                                <exclude reference="AiH-Qj-01z"/>
+                                <exclude reference="RS9-aJ-hyL"/>
+                                <exclude reference="pyB-xL-R9l"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="s3m-27-FIF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0sB-Dl-IFC"/>
+                                <include reference="AiH-Qj-01z"/>
+                                <include reference="RS9-aJ-hyL"/>
+                                <include reference="pyB-xL-R9l"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="priceTextField" destination="1ev-rc-Dzd" id="hGL-vk-wm6"/>
+                        <outlet property="resultLabel" destination="9Mg-u6-upI" id="tAs-4F-2GM"/>
+                        <outlet property="segmentedControl" destination="yiN-nk-R3L" id="c46-dQ-32O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="624" y="522"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="orange_bg" width="160" height="284"/>
+    </resources>
+</document>
